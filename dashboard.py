@@ -12,8 +12,9 @@ st.set_page_config(page_title="Dashboard Sentimen MBG", page_icon="🍽️", lay
 # 2. KONEKSI REST API SUPABASE
 # ==========================================
 # MASUKKAN URL DAN KEY SUPABASE MILIKMU DI SINI
-SUPABASE_URL = "https://vcngqonjewrskaraczjy.supabase.co"
-SUPABASE_KEY = "sb_publishable_HvgsBy9OA6wzdo2O91FSNQ_vHSKRVzD"
+# Ambil data dari rahasia sistem, bukan diketik manual
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 
 # Endpoint untuk mengambil semua data (select=*) dari tabel sentimen_mbg
 API_URL = f"{SUPABASE_URL}/rest/v1/sentimen_mbg?select=*"
